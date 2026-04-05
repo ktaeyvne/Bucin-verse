@@ -1,47 +1,126 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>BucinVerse 🌌</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucin Detector 💕 | Cek Seberapa Bucin Kamu!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-heart"></i>
+                    BUCIN DETECTOR
+                    <i class="fas fa-heart"></i>
+                </h1>
+                <p class="hero-subtitle">Cek seberapa bucin kamu dengan pacar! 💕🔥</p>
+            </div>
+        </header>
 
-<!-- MUSIC -->
-<audio id="music" src="assets/music.mp3" loop></audio>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Test Form -->
+            <section class="test-section">
+                <div class="card">
+                    <h2><i class="fas fa-magic"></i> Mulai Test Sekarang!</h2>
+                    <form id="bucinForm">
+                        <div class="question-group">
+                            <div class="question">
+                                <label>1. Kamu stalking IG story dia setiap jam?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="q1" value="10"> Selalu 😍</label>
+                                    <label><input type="radio" name="q1" value="5"> Sering 💕</label>
+                                    <label><input type="radio" name="q1" value="0"> Jarang 😐</label>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <label>2. Chat dia ga dibales 5 menit langsung panik?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="q2" value="10"> Iya banget! 😱</label>
+                                    <label><input type="radio" name="q2" value="5"> Lumayan panik 💦</label>
+                                    <label><input type="radio" name="q2" value="0"> Santai aja 😎</label>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <label>3. Kamu simpan semua chat kalian dari awal pacaran?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="q3" value="10"> Sampai ribuan chat! 📱</label>
+                                    <label><input type="radio" name="q3" value="5"> Beberapa yang spesial 💌</label>
+                                    <label><input type="radio" name="q3" value="0"> Ga simpan 😅</label>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <label>4. Lihat foto dia langsung senyum-senyum sendiri?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="q4" value="10"> Auto melting 🥰</label>
+                                    <label><input type="radio" name="q4" value="5"> Senyum dikit 😊</label>
+                                    <label><input type="radio" name="q4" value="0"> Biasa aja 🙃</label>
+                                </div>
+                            </div>
+                            <div class="question">
+                                <label>5. Kamu rela begadang nunggu dia online?</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="q5" value="10"> Sampai pagi! 🌙</label>
+                                    <label><input type="radio" name="q5" value="5"> Kadang-kadang 😴</label>
+                                    <label><input type="radio" name="q5" value="0"> Tidur duluan 😴</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-heart-pulse"></i>
+                            Cek Tingkat Bucin Ku!
+                        </button>
+                    </form>
+                </div>
+            </section>
 
-<!-- LANDING -->
-<div id="landing">
-  <h1 class="title">Untuk Kamu 💙</h1>
-  <button onclick="start()">Masuk</button>
-</div>
+            <!-- Result Section -->
+            <section class="result-section" id="resultSection">
+                <div class="result-card" id="resultCard">
+                    <div class="result-icon" id="resultIcon"></div>
+                    <h2 id="resultTitle"></h2>
+                    <p id="resultDesc"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="score" id="scoreText">0%</span>
+                    <button class="btn-secondary" onclick="resetTest()">
+                        <i class="fas fa-redo"></i> Test Lagi
+                    </button>
+                </div>
+            </section>
 
-<!-- MAIN -->
-<div id="main" class="hidden">
+            <!-- Stats -->
+            <section class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <span>10K+ Testers</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <span>99% Akurat</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart"></i>
+                    <span>100% Bucin</span>
+                </div>
+            </section>
+        </main>
 
-  <h2 id="nama">Untuk: Kamu</h2>
+        <!-- Footer -->
+        <footer>
+            <p>Made with ❤️ by <strong>YourName</strong> | <i class="fas fa-code"></i> HTML/CSS/JS</p>
+        </footer>
+    </div>
 
-  <!-- SLIDER -->
-  <div class="slider">
-    <img src="assets/foto1.jpg" class="slide active">
-    <img src="assets/foto2.jpg" class="slide">
-    <img src="assets/foto3.jpg" class="slide">
-  </div>
+    <!-- Particles Background -->
+    <canvas id="particles"></canvas>
 
-  <!-- LETTER -->
-  <div class="letter">
-    <p id="text">
-      Aku nggak jago ngomong…  
-      tapi aku tau satu hal…  
-      aku nyaman sama kamu 💙
-    </p>
-  </div>
-
-  <!-- BUTTON -->
-  <button onclick="love()">Klik Ini 💖</button>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
